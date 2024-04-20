@@ -1,10 +1,11 @@
 import { PropsWithChildren } from 'react'
+import Nav from '../partials/Nav'
 
 const BaseWithNav = ({ children }: PropsWithChildren<BaseWithNavProps>) => {
   return (
     <div>
       {children}
-      <div className="fixed bottom-4 left-4 z-50">nav</div>
+      <Nav className="fixed bottom-4 left-4 z-50" />
     </div>
   )
 }
