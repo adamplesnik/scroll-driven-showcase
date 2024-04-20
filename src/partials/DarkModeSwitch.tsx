@@ -15,12 +15,17 @@ const DarkModeSwitch = () => {
 
   return (
     <div
-      className="flex size-8 cursor-pointer flex-col overflow-hidden rounded-full transition-colors hover:bg-white/40 dark:hover:bg-slate-500/60"
+      className="size-8 cursor-pointer overflow-hidden rounded-full transition-transform hover:scale-105"
       onClick={switchMode}
     >
-      <div className="group flex flex-col">
-        <Sun className="ease-line size-8 p-1 transition-transform duration-700 group-hover:rotate-[22deg]" />
-        <Moon className="ease-line size-8 p-1 transition-transform duration-700 group-hover:-rotate-[22deg]" />
+      <div
+        className={
+          'ease-line flex flex-col transition-[margin] delay-150 duration-500' +
+          (darkMode ? ' -mt-8' : '')
+        }
+      >
+        <Sun className="size-8 p-1" />
+        <Moon className="size-8 p-1" />
       </div>
     </div>
   )
