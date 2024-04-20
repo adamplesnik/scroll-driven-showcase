@@ -1,4 +1,4 @@
-import { BrainCircuit, TentTree } from 'lucide-react'
+import { TentTree } from 'lucide-react'
 import { HTMLAttributes } from 'react'
 import NavItem from '../components/NavItem'
 import { addWithSpace } from '../utils/addWithSpace'
