@@ -5,7 +5,7 @@ const BaseWithNav = ({ children }: PropsWithChildren<BaseWithNavProps>) => {
   return (
     <div>
       {children}
-      <Nav className="fixed bottom-4 left-4 z-50" />
+      <Nav className="fixed bottom-8 left-6 z-50" />
     </div>
   )
 }
