@@ -1,4 +1,4 @@
-import BaseWithNav from './layouts/BaseWithNav'
+import BaseWithNav from '../layouts/BaseWithNav'
 
 function Home() {
   return (

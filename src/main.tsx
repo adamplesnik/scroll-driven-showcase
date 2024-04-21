@@ -2,14 +2,19 @@ import { Analytics } from '@vercel/analytics/react'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './Home.tsx'
 import './index.css'
+import Home from './pages/Home.tsx'
+import Test from './pages/Test.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
     errorElement: <Home />,
+  },
+  {
+    path: '/test',
+    element: <Test />,
   },
 ])
 

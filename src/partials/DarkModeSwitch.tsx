@@ -15,12 +15,12 @@ const DarkModeSwitch = () => {
 
   return (
     <div
-      className="h-16 w-8 cursor-pointer overflow-hidden py-4 transition-transform duration-200 hover:scale-125"
+      className="h-16 w-8 cursor-pointer overflow-hidden py-4 text-zinc-600 transition-colors duration-200 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-100"
       onClick={switchMode}
     >
       <div
         className={
-          'ease-line flex flex-col gap-4 transition-[margin] delay-150 duration-500' +
+          'flex flex-col gap-4 transition-[margin] delay-150 duration-500' +
           (darkMode ? ' -mt-12' : '')
         }
       >
