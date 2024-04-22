@@ -1,21 +1,18 @@
 import { Code2, Monitor } from 'lucide-react'
-import { useState } from 'react'
+import { useReducer } from 'react'
+import techInfoReducer from '../utils/techInfoReducer'
 
 const TechInfoSwitch = () => {
-  const [showTechInfo, setShowTechInfo] = useState(false)
+  const [state, dispatch] = useReducer(techInfoReducer, false)
 
   return (
-    <div onClick={() => setShowTechInfo(!showTechInfo)} className="cursor-pointer">
+    <div onClick={() => dispatch({ type: 'action', payload: !state })} className="cursor-pointer">
       <Monitor
-        className={
-          'size-6 p-0.5 transition-opacity' + (showTechInfo ? ' opacity-0' : ' opacity-100')
-        }
+        className={'size-6 p-0.5 transition-opacity' + (state ? ' opacity-0' : ' opacity-100')}
         strokeWidth={2}
       />
       <Code2
-        className={
-          'size-6 p-0.5 transition-opacity' + (!showTechInfo ? ' opacity-0' : ' opacity-100')
-        }
+        className={'size-6 p-0.5 transition-opacity' + (!state ? ' opacity-0' : ' opacity-100')}
         strokeWidth={2}
       />
     </div>
