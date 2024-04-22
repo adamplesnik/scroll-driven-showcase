@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
 import Home from './pages/Home.tsx'
-import Test from './pages/Test.tsx'
+import Forest from './pages/forest/Forest.tsx'
 
 const router = createBrowserRouter([
   {
@@ -13,8 +13,8 @@ const router = createBrowserRouter([
     errorElement: <Home />,
   },
   {
-    path: '/test',
-    element: <Test />,
+    path: '/forest',
+    element: <Forest />,
   },
 ])
 

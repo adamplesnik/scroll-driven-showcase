@@ -1,9 +1,8 @@
-import { BrainCircuit, TentTree } from 'lucide-react'
+import { TentTree, Trees } from 'lucide-react'
 import { HTMLAttributes } from 'react'
 import NavItem from '../components/NavItem'
 import { addWithSpace } from '../utils/addWithSpace'
 import DarkModeSwitch from './DarkModeSwitch'
-import TechInfoSwitch from './TechInfoSwitch'
 
 const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
   return (
@@ -15,10 +14,9 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
       {...rest}
     >
       <NavItem Icon={TentTree} to="/" />
-      <NavItem Icon={BrainCircuit} to="/test" />
+      <NavItem Icon={Trees} to="/forest" />
       <div className="w-4" />
       <DarkModeSwitch />
-      <TechInfoSwitch />
     </div>
   )
 }
