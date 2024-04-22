@@ -12,6 +12,7 @@ export default {
         'to-opacity-full': 'to-opacity-full 5s ease-in-out forwards',
         'to-stroke-dashoffset-0': 'to-stroke-dashoffset-0 5s ease-in-out forwards',
         'to-translate-x-0': 'to-translate-x-0 5s ease-in-out forwards',
+        'to-translate-y-0': 'to-translate-y-0 5s ease-in-out forwards',
         'stroke-opacity':
           'to-opacity-full 5s ease-in-out forwards, to-translate-x-0 5s ease-in-out forwards',
       },
@@ -46,6 +47,9 @@ export default {
         },
         'to-translate-x-0': {
           to: { transform: 'translateX(0)' },
+        },
+        'to-translate-y-0': {
+          to: { transform: 'translateY(0)' },
         },
       },
       transitionTimingFunction: {

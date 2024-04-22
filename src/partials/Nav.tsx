@@ -1,4 +1,4 @@
-import { TentTree, Trees } from 'lucide-react'
+import { Github, TentTree, Trees } from 'lucide-react'
 import { HTMLAttributes } from 'react'
 import NavItem from '../components/NavItem'
 import { addWithSpace } from '../utils/addWithSpace'
@@ -17,6 +17,11 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
       <NavItem Icon={Trees} to="/forest" />
       <div className="w-4" />
       <DarkModeSwitch />
+      <NavItem
+        Icon={Github}
+        to="https://github.com/adamplesnik/scroll-driven-playground"
+        target="_blank"
+      />
     </div>
   )
 }
