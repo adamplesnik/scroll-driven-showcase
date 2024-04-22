@@ -20,12 +20,12 @@ const DarkModeSwitch = () => {
     >
       <div
         className={
-          'flex flex-col gap-4 transition-[margin] delay-150 duration-500' +
-          (darkMode ? '' : ' -mt-12')
+          'flex flex-col items-center justify-center gap-6 transition-[margin] delay-150 duration-500' +
+          (darkMode ? ' mt-1' : ' -mt-11')
         }
       >
-        <Moon className="size-8 p-1" strokeWidth={1.7} />
-        <Sun className="size-8 p-1" strokeWidth={1.7} />
+        <Moon className="size-6 p-0.5" strokeWidth={2} />
+        <Sun className="size-6 p-0.5" strokeWidth={2} />
       </div>
     </div>
   )

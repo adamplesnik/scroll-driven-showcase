@@ -3,6 +3,7 @@ import { HTMLAttributes } from 'react'
 import NavItem from '../components/NavItem'
 import { addWithSpace } from '../utils/addWithSpace'
 import DarkModeSwitch from './DarkModeSwitch'
+import TechInfoSwitch from './TechInfoSwitch'
 
 const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
   return (
@@ -17,6 +18,7 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
       <NavItem Icon={BrainCircuit} to="/test" />
       <div className="w-4" />
       <DarkModeSwitch />
+      <TechInfoSwitch />
     </div>
   )
 }
