@@ -6,7 +6,7 @@ const TextAppear = () => {
       {text.map((letter, i) => {
         return (
           <span
-            className="animate-to-max-width-unset inline-block max-w-0 overflow-hidden text-4xl text-zinc-100 timeline"
+            className="inline-block h-24 max-w-0 animate-to-max-width-unset overflow-hidden text-4xl text-zinc-100 timeline sm:text-6xl md:text-7xl"
             style={{
               animationRangeStart: (i + 1) * (i + 10),
               animationRangeEnd: (i + 1) * (i + 12),
