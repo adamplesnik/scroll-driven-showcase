@@ -7,9 +7,9 @@ const TimelineMarker = ({
   className,
 }: TimelineMarkerProps) => {
   return (
-    <div className={'flex items-center gap-4' + addWithSpace(className)}>
+    <div className={'-mx-16 flex items-center gap-4' + addWithSpace(className)}>
       {textStart && <span className="font-mono text-sm font-semibold">{textStart}</span>}
-      <div className="h-px flex-1 bg-current opacity-20"></div>
+      <div className="h-px flex-1 border-t border-dashed border-t-current opacity-70"></div>
       {textEnd && <span className="font-mono text-sm">{textEnd}</span>}
     </div>
   )

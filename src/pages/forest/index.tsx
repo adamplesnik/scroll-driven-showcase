@@ -6,6 +6,7 @@ import CenterLayout from '../../layouts/CenterLayout'
 import Amenities from './Amenities'
 import TextAppear from './TextAppear'
 import landscapeImage from './assets/landscape.jpg'
+import viewImage from './assets/view.jpg'
 
 const Forest = () => {
   return (
@@ -45,6 +46,7 @@ const Forest = () => {
           to take your order, just like it's always been.
         </Paragraph>
         <Paragraph>Or not.</Paragraph>
+        <img src={viewImage} alt="" />
       </CenterLayout>
     </BaseWithNav>
   )
