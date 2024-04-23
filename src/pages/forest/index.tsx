@@ -22,7 +22,7 @@ const Forest = () => {
           </div>
         </div>
       </div>
-      <CenterLayout narrow>
+      <CenterLayout narrow className="mb-24">
         <Heading size={2}>Natural Retreat</Heading>
         <Paragraph>
           Nestled deep within a misty mountain forest, this charming chalet offers a rustic escape
@@ -35,6 +35,16 @@ const Forest = () => {
           modern amenities, allowing you to cook while still feeling connected to the outdoors.
         </Paragraph>
         <Amenities />
+        <Paragraph>
+          At our establishment, we pride ourselves on maintaining a traditional approach to
+          receiving orders. We exclusively accept orders through our landline telephone service.
+        </Paragraph>
+        <Paragraph>
+          In a world where digital communication dominates, we embrace the simplicity and
+          reliability of the landline. When you call us, you'll be greeted by a friendly voice ready
+          to take your order, just like it's always been.
+        </Paragraph>
+        <Paragraph>Or not.</Paragraph>
       </CenterLayout>
     </BaseWithNav>
   )
