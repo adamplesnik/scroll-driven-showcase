@@ -13,9 +13,8 @@ const Forest = () => {
       <ScrollDown />
       <div className="h-[200vh]">
         <div className="sticky top-0 flex max-h-screen">
-          <div className="absolute inset-0 z-10 animate-gradient bg-gradient-to-l from-gray-100/0 via-gray-100/40 to-gray-200/0 bg-no-repeat timeline-view"></div>
           <div
-            className="absolute inset-0 flex items-center overflow-hidden bg-cover bg-center"
+            className="absolute inset-0 flex animate-to-opacity-full items-center overflow-hidden bg-cover bg-center"
             style={{ backgroundImage: `url(${landscapeImage})` }}
           ></div>
           <div className="sticky top-1/2 z-10 flex h-dvh w-full items-center justify-center">
