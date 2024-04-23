@@ -14,13 +14,10 @@ const Forest = () => {
       <div className="h-[200vh]">
         <div className="sticky top-0 flex max-h-screen">
           <div className="absolute inset-0 z-10 animate-gradient bg-gradient-to-l from-gray-100/0 via-gray-100/40 to-gray-200/0 bg-no-repeat timeline-view"></div>
-          <div className="absolute inset-0 flex items-center overflow-hidden object-cover">
-            <img
-              src={landscapeImage}
-              alt="Photo of the mountain landscape"
-              className="z-0 max-w-fit animate-to-opacity-full overflow-hidden object-cover opacity-0 timeline-view range/300px-700px"
-            />
-          </div>
+          <div
+            className="absolute inset-0 flex items-center overflow-hidden bg-cover bg-center"
+            style={{ backgroundImage: `url(${landscapeImage})` }}
+          ></div>
           <div className="sticky top-1/2 z-10 flex h-dvh w-full items-center justify-center">
             <TextAppear />
           </div>
