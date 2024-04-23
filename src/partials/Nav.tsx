@@ -3,6 +3,7 @@ import { HTMLAttributes } from 'react'
 import NavItem from '../components/NavItem'
 import { addWithSpace } from '../utils/addWithSpace'
 import DarkModeSwitch from './DarkModeSwitch'
+import TechInfoSwitch from './TechInfoSwitch'
 
 const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
   return (
@@ -17,6 +18,7 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
       <NavItem Icon={Trees} to="/forest" />
       <div className="min-w-8 flex-1" />
       <DarkModeSwitch />
+      <TechInfoSwitch />
       <NavItem
         Icon={Github}
         to="https://github.com/adamplesnik/scroll-driven-playground"

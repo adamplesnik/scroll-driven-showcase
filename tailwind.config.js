@@ -77,6 +77,7 @@ export default {
         { values: { DEFAULT: '' }, modifiers: 'any' }
       )
       addVariant('path', '& > path')
+      addVariant('isTech', '&:where(.tech, .tech *)')
     }),
   ],
 }
