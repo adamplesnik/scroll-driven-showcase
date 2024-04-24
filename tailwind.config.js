@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import plugin from 'tailwindcss/plugin'
+import { transform } from 'typescript'
 
 export default {
   darkMode: 'selector',
@@ -12,6 +13,7 @@ export default {
         'to-height-full': 'to-height-full 5s linear forwards',
         'to-max-width-unset': 'to-max-width-unset 5s linear forwards',
         'to-opacity-full': 'to-opacity-full 5s ease-in-out forwards',
+        'to-rotate-0': 'to-rotate-0 5s ease-in-out forwards',
         'to-stroke-dashoffset-0': 'to-stroke-dashoffset-0 5s ease-in-out forwards',
         'to-translate-x-0': 'to-translate-x-0 5s ease-in-out forwards',
         'to-translate-y-0': 'to-translate-y-0 5s ease-in-out forwards',
@@ -32,6 +34,9 @@ export default {
           to: {
             backgroundSize: '400% 100%',
           },
+        },
+        'to-rotate-0': {
+          to: { transform: 'rotateX(0)' },
         },
         reveal: {
           '50%': {
