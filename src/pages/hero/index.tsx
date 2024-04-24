@@ -27,26 +27,28 @@ const Hero = () => {
   return (
     <BaseWithNav>
       <ScrollDown />
-      <CenterLayout className="h-[200vh]">
-        <div className="relative h-full w-full">
-          <TimelineMarker textStart="timeline" textEnd="0%" className="top-24" />
-          <div className="sticky top-40 animate-gradient bg-gradient-to-r from-violet-200/0 via-red-400/70 to-cyan-300/0 bg-clip-text bg-no-repeat pb-12 text-5xl font-bold text-transparent opacity-0 timeline range/0-200vh no-animations:opacity-100 sm:text-7xl md:text-9xl dark:via-red-600/70">
-            Scroll Superpower.
+      <div className="bg-gradient-to-t from-slate-400/0 to-slate-600/50">
+        <CenterLayout className="h-[200vh]">
+          <div className="relative h-full w-full">
+            <TimelineMarker textStart="timeline" textEnd="0%" className="top-24" />
+            <div className="sticky top-40 animate-gradient bg-gradient-to-r from-violet-200/0 via-red-600/70 to-red-300/0 bg-clip-text bg-no-repeat pb-12 text-5xl font-bold text-transparent opacity-0 timeline range/0-200vh no-animations:opacity-100 sm:text-7xl md:text-9xl dark:via-red-600/70">
+              Scroll Superpower.
+            </div>
+            <TimelineMarker textStart="+200vh" textEnd="100%" className="bottom-8" />
           </div>
-          <TimelineMarker textStart="+200vh" textEnd="100%" className="bottom-8" />
-        </div>
-      </CenterLayout>
-      <CenterLayout>
-        <CodeBlock
-          language="html"
-          className="mx-auto mb-72 block w-fit"
-          Icon={Github}
-          linkHref="https://github.com/adamplesnik/scroll-driven-playground/tree/main/src/pages/hero"
-        >
-          {gradient}
-        </CodeBlock>
-      </CenterLayout>
-      <div className="mb-72">
+        </CenterLayout>
+        <CenterLayout>
+          <CodeBlock
+            language="html"
+            className="mx-auto mb-72 block w-fit"
+            Icon={Github}
+            linkHref="https://github.com/adamplesnik/scroll-driven-playground/tree/main/src/pages/hero"
+          >
+            {gradient}
+          </CodeBlock>
+        </CenterLayout>
+      </div>
+      <div className="mb-72 bg-gradient-to-b from-slate-600/0 via-slate-600/30 to-slate-600/0">
         <div className="sticky top-0 h-dvh w-full">
           <CenterLayout className="relative flex h-dvh flex-col justify-between px-4 py-16 sm:px-8">
             <TimelineMarker absolute={false} textStart="timeline-view" textEnd={'100%'} />
@@ -74,8 +76,8 @@ const Hero = () => {
           </CenterLayout>
         </div>
       </div>
-      <div className="relative mb-72">
-        <div className="sticky top-0 flex h-screen w-full items-center bg-red-50 scope/chart">
+      <div className="relative bg-gradient-to-b from-slate-400/0 to-slate-400/30">
+        <div className="sticky top-0 flex h-screen w-full items-center scope/chart">
           <CenterLayout className="h-2/3 w-full">
             <div className="relative flex h-full items-center justify-between pl-32">
               {columns.map((column, i) => (

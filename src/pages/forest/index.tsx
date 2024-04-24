@@ -71,7 +71,7 @@ const Forest = () => {
           to take your order, just like it's always been.
         </Paragraph>
         <Paragraph>Or not.</Paragraph>
-        <img src={viewImage} alt="" />
+        <img src={viewImage} alt="" className="rounded-lg" />
       </CenterLayout>
     </BaseWithNav>
   )
