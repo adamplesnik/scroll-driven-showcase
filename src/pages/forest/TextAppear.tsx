@@ -1,6 +1,6 @@
 const TextAppear = () => {
   const text = Array.from('Experience Tranquility')
-  // const textLength = text.length
+
   return (
     <>
       {text.map((letter, i) => {

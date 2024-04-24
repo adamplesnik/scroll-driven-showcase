@@ -20,7 +20,7 @@ const CodeBlock = ({
   return (
     <div
       className={
-        'mb-4 hidden rounded-lg border border-zinc-300 bg-zinc-100 text-zinc-900 isTech:block dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300' +
+        'mb-4 hidden rounded-lg border border-zinc-300 bg-gray-200/50 text-zinc-900 backdrop-blur isTech:block dark:border-zinc-700 dark:bg-gray-800/80 dark:text-zinc-300' +
         addWithSpace(className)
       }
       {...rest}
@@ -31,11 +31,7 @@ const CodeBlock = ({
         {children}
       </code>
       {linkHref && (
-        <div
-          className={
-            'flex items-center gap-2 border-t border-t-zinc-300 bg-zinc-200/10 px-2 py-2 text-xs sm:px-4 dark:border-t-slate-700 dark:bg-zinc-800/10 '
-          }
-        >
+        <div className="flex items-center gap-2 border-t border-t-zinc-300 px-2 py-2 text-xs sm:px-4 dark:border-t-slate-700">
           {Icon && <Icon size={14} strokeWidth={2} className="flex-shrink-0" />}
           <Link href={linkHref} target={'_blank'} borderWidth={'narrow'}>
             {linkText ? linkText : linkHref}

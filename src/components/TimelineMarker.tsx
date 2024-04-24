@@ -9,7 +9,7 @@ const TimelineMarker = ({
   return (
     <div
       className={
-        'isTech:flex -mx-4 hidden items-center gap-4 font-mono text-sm text-zinc-900 sm:-mx-8 md:-mx-14 dark:text-zinc-100' +
+        'absolute z-40 hidden w-full items-center gap-4 font-mono text-sm text-zinc-900 isTech:flex dark:text-zinc-100' +
         addWithSpace(className)
       }
     >

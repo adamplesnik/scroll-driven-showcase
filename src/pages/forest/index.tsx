@@ -1,6 +1,9 @@
+import { Github } from 'lucide-react'
+import CodeBlock from '../../components/CodeBlock'
 import Heading from '../../components/Heading'
 import Paragraph from '../../components/Paragraph'
 import ScrollDown from '../../components/ScrollDown'
+import TimelineMarker from '../../components/TimelineMarker'
 import BaseWithNav from '../../layouts/BaseWithNav'
 import CenterLayout from '../../layouts/CenterLayout'
 import Amenities from './Amenities'
@@ -13,15 +16,37 @@ const Forest = () => {
     <BaseWithNav>
       <ScrollDown />
       <div className="h-[200vh]">
+        <CenterLayout narrow>
+          <div className="relative">
+            <TimelineMarker
+              className="top-[190px]"
+              textStart="190px"
+              textEnd="timeline"
+            ></TimelineMarker>
+            <TimelineMarker
+              className="top-[210px]"
+              textStart="210px"
+              textEnd="scroll(y)"
+            ></TimelineMarker>
+          </div>
+        </CenterLayout>
         <div className="sticky top-0 flex max-h-screen">
           <div
-            className="absolute inset-0 flex animate-to-opacity-full items-center overflow-hidden bg-cover bg-center"
+            className="absolute inset-0 flex items-center overflow-hidden bg-cover bg-center"
             style={{ backgroundImage: `url(${landscapeImage})` }}
           ></div>
-          <div className="sticky top-1/2 z-10 flex h-dvh w-full items-center justify-center">
+          <div className="sticky top-1/2 z-10 flex h-screen w-full items-center justify-center">
             <TextAppear />
           </div>
         </div>
+        <CenterLayout narrow>
+          <CodeBlock
+            language="html"
+            className="relative z-50"
+            Icon={Github}
+            linkHref="https://github.com/adamplesnik/scroll-driven-playground/tree/main/src/pages/forest"
+          >{`<span class="max-w-0 animate-to-max-width-unset overflow-hidden timeline" style="animation-range: 190px 210px;">e</span>`}</CodeBlock>
+        </CenterLayout>
       </div>
       <CenterLayout narrow className="mb-24">
         <Heading size={2}>Natural Retreat</Heading>
