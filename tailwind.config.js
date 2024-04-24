@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       animation: {
-        gradient: 'gradient auto ease-in-out forwards',
+        gradient: 'gradient 5s ease-in-out forwards',
+        reveal: 'reveal 5s ease-in-out forwards',
+        'to-height-full': 'to-height-full 5s linear forwards',
         'to-max-width-unset': 'to-max-width-unset 5s linear forwards',
         'to-opacity-full': 'to-opacity-full 5s ease-in-out forwards',
         'to-stroke-dashoffset-0': 'to-stroke-dashoffset-0 5s ease-in-out forwards',
@@ -19,22 +21,26 @@ export default {
       keyframes: {
         gradient: {
           from: {
-            backgroundSize: '400% 100%',
+            backgroundSize: '33% 100%',
           },
-          '50%': {
-            backgroundSize: '200% 100%',
-          },
-          '70%': {
-            backgroundSize: '100% 100%',
+          '10%': {
             opacity: 1,
           },
-          '98%': {
-            opacity: 0,
+          '50%': {
+            backgroundSize: '100% 100%',
           },
           to: {
-            backgroundSize: '44% 100%',
-            opacity: 0,
+            backgroundSize: '400% 100%',
           },
+        },
+        reveal: {
+          '50%': {
+            opacity: 1,
+            transform: 'scale(3)',
+          },
+        },
+        'to-height-full': {
+          to: { height: '100%' },
         },
         'to-max-width-unset': {
           to: { maxWidth: 'unset' },

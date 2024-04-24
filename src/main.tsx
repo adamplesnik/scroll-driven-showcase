@@ -3,14 +3,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
-import Home from './pages/Home.tsx'
 import Forest from './pages/forest/'
+import Hero from './pages/hero/index.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
-    errorElement: <Home />,
+    element: <Hero />,
+    errorElement: <Hero />,
   },
   {
     path: '/forest',

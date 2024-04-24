@@ -5,12 +5,14 @@ const TimelineMarker = ({
   textStart = undefined,
   textEnd = undefined,
   className,
+  absolute = true,
 }: TimelineMarkerProps) => {
   return (
     <div
       className={
-        'absolute z-40 hidden w-full items-center gap-4 font-mono text-sm text-zinc-900 isTech:flex dark:text-zinc-100' +
-        addWithSpace(className)
+        'z-40 hidden w-full items-center gap-4 font-mono text-sm text-zinc-900 isTech:flex dark:text-zinc-100' +
+        addWithSpace(className) +
+        (absolute ? ' absolute' : '')
       }
     >
       {textStart && <span className="font-semibold">{textStart}</span>}
@@ -23,6 +25,7 @@ const TimelineMarker = ({
 export type TimelineMarkerProps = {
   textStart?: string | undefined
   textEnd?: string | undefined
+  absolute?: boolean
 } & HTMLAttributes<HTMLDivElement>
 
 export default TimelineMarker
