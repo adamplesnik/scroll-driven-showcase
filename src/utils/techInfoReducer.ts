@@ -6,6 +6,7 @@ type TechInfoActionType = {
 export default function techInfoReducer(state: boolean, action: TechInfoActionType) {
   switch (action.type) {
     case 'action': {
+      localStorage.setItem('tech', state ? 'false' : 'true')
       return (state = !state)
     }
     default: {
