@@ -19,9 +19,9 @@ const columns = [
   'max-h-[43%]',
 ]
 
-const gradient = `<div class="animate-gradient timeline range/0-200vh"></div>`
+const gradient = `<div class="animate-gradient timeline range/0_200vh"></div>`
 const html = `<div class="animate-reveal timeline-view"></div>`
-const chart = `<div class="animate-to-height-full timeline/chart range-on-entry/60px-400px"></div>`
+const chart = `<div class="animate-to-height-full timeline/chart range-on-entry/60px_400px"></div>`
 
 const Hero = () => {
   return (
@@ -31,7 +31,7 @@ const Hero = () => {
         <CenterLayout className="h-[200vh]">
           <div className="relative h-full w-full">
             <TimelineMarker textStart="timeline" textEnd="0%" className="top-24" />
-            <div className="sticky top-40 animate-gradient bg-gradient-to-r from-violet-200/0 via-red-600/70 to-red-300/0 bg-clip-text bg-no-repeat pb-12 text-5xl font-bold text-transparent opacity-0 timeline range/0-200vh no-animations:opacity-100 sm:text-7xl md:text-9xl dark:via-red-600/70">
+            <div className="sticky top-40 animate-gradient bg-gradient-to-r from-violet-200/0 via-red-600/70 to-red-300/0 bg-clip-text bg-no-repeat pb-12 text-5xl font-bold text-transparent opacity-0 timeline range/0_200vh no-animations:opacity-100 sm:text-7xl md:text-9xl dark:via-red-600/70">
               Scroll Superpower.
             </div>
             <TimelineMarker textStart="+200vh" textEnd="100%" className="bottom-8" />
