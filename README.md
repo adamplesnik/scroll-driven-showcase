@@ -1,18 +1,16 @@
 # Scroll-driven Playground
 
-Playground to explore possibilities of CSS-only scroll-driven animations.
+Explore the possibilities of scroll-driven CSS animations. Powered by **Tailwind CSS**.
 
-## About the project
-
-On this page I explore the possibilities of scroll-driven CSS animations. It grows on a non-regular basis.
+No animation JavaScript libraries were used. Some browsers might have been harmed during the process.
 
 ## Tools
 
 - Built in Vite + React
 - Deployed on Vercel
 - Styled exclusively with
-  - <a href="https://tailwindcss.com">Tailwind CSS</a>, and
-  - <a href="https://www.npmjs.com/package/@adam.plesnik/tailwindcss-scroll-driven-animations"> Scroll Driven Animations Plugin for Tailwind CSS</a>
+  - <a href="https://tailwindcss.com" target="_blank">Tailwind CSS</a>, and
+  - <a href="https://www.npmjs.com/package/@adam.plesnik/tailwindcss-scroll-driven-animations"  target="_blank">Scroll Driven Animations Plugin for Tailwind CSS</a>
 
 ## Author
 

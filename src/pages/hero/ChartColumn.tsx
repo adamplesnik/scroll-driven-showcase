@@ -5,7 +5,7 @@ const ChartColumn = ({ className = '' }: ChartColumnProps) => {
     <div className="relative flex h-full w-4 items-end bg-gray-200/50 dark:bg-gray-800/50">
       <div
         className={
-          'animate-to-height-full h-0 w-full rounded-t-full bg-gradient-to-tr from-cyan-300 to-indigo-300/50 timeline/chart range-on-entry/60px-400px no-animations:h-full dark:from-zinc-400 dark:to-zinc-500 ' +
+          'animate-to-height-full h-0 w-full rounded-t-full bg-gradient-to-tr from-cyan-300 to-indigo-300/50 timeline/chart range-on-entry/60px_400px no-animations:h-full dark:from-zinc-400 dark:to-zinc-500 ' +
           addWithSpace(className)
         }
       ></div>

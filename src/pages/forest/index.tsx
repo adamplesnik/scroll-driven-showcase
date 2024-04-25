@@ -16,7 +16,7 @@ const Forest = () => {
     <BaseWithNav>
       <ScrollDown />
       <div className="h-[200vh]">
-        <CenterLayout narrow>
+        <CenterLayout>
           <div className="relative">
             <TimelineMarker
               className="top-[190px]"
@@ -39,7 +39,7 @@ const Forest = () => {
             <TextAppear />
           </div>
         </div>
-        <CenterLayout narrow>
+        <CenterLayout>
           <CodeBlock
             language="html"
             className="relative z-50"
@@ -48,7 +48,7 @@ const Forest = () => {
           >{`<span class="max-w-0 animate-to-max-width-unset overflow-hidden timeline" style="animation-range: 190px 210px;">e</span>`}</CodeBlock>
         </CenterLayout>
       </div>
-      <CenterLayout narrow className="mb-24">
+      <CenterLayout className="mb-24">
         <Heading size={2}>Natural Retreat</Heading>
         <Paragraph>
           Nestled deep within a misty mountain forest, this charming chalet offers a rustic escape

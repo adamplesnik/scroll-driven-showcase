@@ -19,9 +19,9 @@ const columns = [
   'max-h-[43%]',
 ]
 
-const gradient = `<div class="animate-gradient timeline range/0-200vh"></div>`
+const gradient = `<div class="animate-gradient timeline range/0_200vh"></div>`
 const html = `<div class="animate-reveal timeline-view"></div>`
-const chart = `<div class="animate-to-height-full timeline/chart range-on-entry/60px-400px"></div>`
+const chart = `<div class="animate-to-height-full timeline/chart range-on-entry/60px_400px"></div>`
 
 const Hero = () => {
   return (
@@ -30,8 +30,8 @@ const Hero = () => {
       <div className="bg-gradient-to-t from-slate-400/0 to-slate-600/50">
         <CenterLayout className="h-[200vh]">
           <div className="relative h-full w-full">
-            <TimelineMarker textStart="timeline" textEnd="0%" className="top-24" />
-            <div className="sticky top-40 animate-gradient bg-gradient-to-r from-violet-200/0 via-red-600/70 to-red-300/0 bg-clip-text bg-no-repeat pb-12 text-5xl font-bold text-transparent opacity-0 timeline range/0-200vh no-animations:opacity-100 sm:text-7xl md:text-9xl dark:via-red-600/70">
+            <TimelineMarker textStart="timeline" textEnd="15%" className="top-[30vh]" />
+            <div className="sticky top-40 animate-gradient bg-gradient-to-r from-violet-200/0 via-red-600/70 to-red-300/0 bg-clip-text bg-no-repeat pb-12 text-5xl font-bold text-transparent opacity-0 timeline range/0_200vh no-animations:opacity-100 sm:text-7xl md:text-9xl dark:via-red-600/70">
               Scroll Superpower.
             </div>
             <TimelineMarker textStart="+200vh" textEnd="100%" className="bottom-8" />
@@ -50,11 +50,12 @@ const Hero = () => {
       </div>
       <div className="mb-72 bg-gradient-to-b from-slate-600/0 via-slate-600/30 to-slate-600/0">
         <div className="sticky top-0 h-dvh w-full">
-          <CenterLayout className="relative flex h-dvh flex-col justify-between px-4 py-16 sm:px-8">
-            <TimelineMarker absolute={false} textStart="timeline-view" textEnd={'100%'} />
-            <TimelineMarker absolute={false} textEnd={'75%'} />
-            <TimelineMarker absolute={false} textEnd={'50%'} />
-            <TimelineMarker absolute={false} textEnd={'25%'} />
+          <CenterLayout className="relative flex h-dvh flex-col justify-between px-4 sm:px-8">
+            <span />
+            <TimelineMarker absolute={false} textStart="timeline-view" textEnd={'80%'} />
+            <TimelineMarker absolute={false} textEnd={'60%'} />
+            <TimelineMarker absolute={false} textEnd={'40%'} />
+            <TimelineMarker absolute={false} textEnd={'20%'} />
             <TimelineMarker absolute={false} textStart="timeline-view" textEnd={'0%'} />
           </CenterLayout>
         </div>
@@ -86,8 +87,8 @@ const Hero = () => {
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-zinc-500 view-timeline/chart" />
             </div>
             <div className="relative">
-              <TimelineMarker textStart="`on-entry`" textEnd="0" className="-bottom-2" />
-              <TimelineMarker textStart="+60px" textEnd="0%" className="-bottom-[70px]" />
+              <TimelineMarker textStart="`on-entry`" textEnd="0" className="-bottom-2.5" />
+              <TimelineMarker textStart="+60px" textEnd="0%" className="-bottom-[72px]" />
             </div>
           </CenterLayout>
         </div>
