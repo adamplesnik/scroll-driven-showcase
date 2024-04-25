@@ -18,14 +18,14 @@ const TechInfoSwitch = () => {
           'absolute size-8 p-1 transition-[transform,opacity] delay-150 duration-300 ease-line' +
           (state ? ' -rotate-180 opacity-0' : ' opacity-100')
         }
-        strokeWidth={'1.5'}
+        strokeWidth={'1.2'}
       />
       <Code2
         className={
           'absolute size-8 p-1 transition-[transform,opacity] delay-150 duration-300 ease-line' +
           (!state ? ' rotate-180 opacity-0' : ' opacity-100')
         }
-        strokeWidth={'1.5'}
+        strokeWidth={'1.2'}
       />
     </div>
   )
