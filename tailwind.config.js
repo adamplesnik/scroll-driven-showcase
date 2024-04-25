@@ -9,13 +9,15 @@ export default {
     extend: {
       animation: {
         gradient: 'gradient 5s ease-in-out forwards',
-        reveal: 'reveal 5s ease-in-out forwards',
+        line: 'line 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
+        reveal: 'reveal 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
         'to-height-full': 'to-height-full 5s linear forwards',
         'to-max-width-unset': 'to-max-width-unset 5s linear forwards',
         'to-opacity-full': 'to-opacity-full 5s ease-in-out forwards',
         'to-rotate-0': 'to-rotate-0 5s ease-in-out forwards',
         'to-stroke-dashoffset-0': 'to-stroke-dashoffset-0 5s ease-in-out forwards',
         'to-translate-x-0': 'to-translate-x-0 5s ease-in-out forwards',
+        'to-translate-x-50': 'to-translate-x-50 5s ease-in-out forwards',
         'to-translate-y-0': 'to-translate-y-0 5s ease-in-out forwards',
         'stroke-opacity':
           'to-opacity-full 5s ease-in-out forwards, to-translate-x-0 5s ease-in-out forwards',
@@ -38,6 +40,9 @@ export default {
         'to-rotate-0': {
           to: { transform: 'rotateX(0)' },
         },
+        line: {
+          '50%': { height: '200%', transform: 'translateY(-50%)' },
+        },
         reveal: {
           '50%': {
             opacity: 1,
@@ -58,6 +63,9 @@ export default {
         },
         'to-translate-x-0': {
           to: { transform: 'translateX(0)' },
+        },
+        'to-translate-x-50': {
+          to: { transform: 'translateX(-50vw)' },
         },
         'to-translate-y-0': {
           to: { transform: 'translateY(0)' },
