@@ -15,8 +15,12 @@ const TimelineMarker = ({
         (absolute ? ' absolute' : '')
       }
     >
-      {textStart && <span className="font-semibold">{textStart}</span>}
-      <div className="h-px flex-1 border-t border-dashed border-t-current opacity-70"></div>
+      {textStart && (
+        <span className="-mt-1.5 inline-block rounded bg-fuchsia-100/80 p-1 font-semibold dark:bg-fuchsia-600/20">
+          {textStart}
+        </span>
+      )}
+      <div className="h-px flex-1 border-t-2 border-dashed border-t-current opacity-90"></div>
       {textEnd && <span>{textEnd}</span>}
     </div>
   )
