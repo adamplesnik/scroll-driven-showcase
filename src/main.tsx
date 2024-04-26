@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
 import Forest from './pages/forest/'
 import Hero from './pages/hero/index.tsx'
+import List from './pages/list/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/forest',
     element: <Forest />,
+  },
+  {
+    path: '/list',
+    element: <List />,
   },
 ])
 
