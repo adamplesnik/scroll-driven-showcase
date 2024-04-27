@@ -15,6 +15,8 @@ export default {
         'to-stroke-dashoffset-0': 'to-stroke-dashoffset-0 5s ease-in-out forwards',
         'to-translate-x-0': 'to-translate-x-0 5s ease-in-out forwards',
         'to-translate-y-0': 'to-translate-y-0 5s ease-in-out forwards',
+        'from-box-shadow-none': 'from-box-shadow-none 5s ease-in-out forwards',
+        'from-translate-y-0': 'from-translate-y-0 5s ease-in-out forwards',
         'stroke-opacity':
           'to-opacity-full 5s ease-in-out forwards, to-translate-x-0 5s ease-in-out forwards',
       },
@@ -56,6 +58,12 @@ export default {
         },
         'to-translate-y-0': {
           to: { transform: 'translateY(0)' },
+        },
+        'from-translate-y-0': {
+          from: { transform: 'translateY(0)' },
+        },
+        'from-box-shadow-none': {
+          from: { boxShadow: 'none' },
         },
       },
       transitionTimingFunction: {

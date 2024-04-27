@@ -1,11 +1,12 @@
 import { HTMLAttributes } from 'react'
+import { addWithSpace } from '../../utils/addWithSpace'
 
-const Song = ({ title, length, order = 0 }: SongType) => {
+const Song = ({ title, length, order = 0, className, ...rest }: SongType) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className={'flex items-center gap-2' + addWithSpace(className)} {...rest}>
       <span className="text-sm opacity-60">{order}</span>
       <span className="flex-1">{title}</span>
-      {length}
+      <span className="text-sm opacity-60">{length}</span>
     </div>
   )
 }
