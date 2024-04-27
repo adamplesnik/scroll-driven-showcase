@@ -9,7 +9,7 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
       className={
-        'flex items-center gap-2 overflow-hidden bg-slate-100/40 px-4 shadow-2xl shadow-black/5 backdrop-blur md:rounded-full dark:bg-slate-400/20' +
+        'flex items-center gap-2 bg-slate-100/40 px-4 shadow-2xl shadow-black/5 backdrop-blur md:rounded-full dark:bg-slate-400/20' +
         addWithSpace(className)
       }
       {...rest}
