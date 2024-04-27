@@ -1,5 +1,6 @@
 import { Code2, Monitor } from 'lucide-react'
 import { useReducer } from 'react'
+import { Tooltip } from 'react-tooltip'
 import techInfoReducer from '../utils/techInfoReducer'
 
 const TechInfoSwitch = () => {
@@ -8,10 +9,17 @@ const TechInfoSwitch = () => {
   const classList = document.body.classList
   state ? classList.add('tech') : classList.remove('tech')
 
+  const tooltipContent = state ? 'Hide code and guides' : 'Show code and guides'
+
   return (
     <div
       onClick={() => dispatch({ type: 'action', payload: !state })}
       className="size-8 cursor-pointer text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-100"
+      data-tooltip-id="tooltip"
+      data-tooltip-content={tooltipContent}
+      data-tooltip-place="bottom"
+      data-tooltip-delay-show={150}
+      data-tooltip-offset={12}
     >
       <Monitor
         className={
@@ -27,6 +35,7 @@ const TechInfoSwitch = () => {
         }
         strokeWidth={'1.2'}
       />
+      <Tooltip id="tooltip" className="!rounded-md !bg-zinc-600 !text-xs shadow-lg" />
     </div>
   )
 }

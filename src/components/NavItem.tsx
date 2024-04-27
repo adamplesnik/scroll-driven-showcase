@@ -10,15 +10,15 @@ const NavItem = ({ Icon, to, className, children, ...rest }: NavItemProps) => {
         'relative flex px-2  transition-colors duration-200 hover:text-zinc-950  dark:hover:text-zinc-100' +
         addWithSpace(className) +
         (isActive
-          ? ' text-zinc-950 dark:text-zinc-200'
-          : ' text-zinc-600 dark:text-zinc-400 [&>span]:translate-y-1')
+          ? ' text-zinc-950 dark:text-zinc-200 [&>div]:block'
+          : ' text-zinc-600 dark:text-zinc-400')
       }
       {...rest}
     >
       <>
         {Icon ? <Icon strokeWidth={'1.2'} /> : ''}
         {children}
-        <span className="absolute -bottom-6 left-1/2 -ml-1 block size-2 rounded-full bg-current transition-transform delay-150 duration-300" />
+        <div className="absolute -bottom-5 left-1/2 -ml-1 hidden h-1 w-2 rounded-t-full bg-current transition-transform delay-150 duration-300" />
       </>
     </NavLink>
   )
