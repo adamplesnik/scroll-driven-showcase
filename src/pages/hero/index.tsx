@@ -40,7 +40,7 @@ const Hero = () => {
         <CenterLayout>
           <CodeBlock
             language="html"
-            className="mx-auto mb-72 block w-fit"
+            className="mb-72"
             Icon={Github}
             linkHref="https://github.com/adamplesnik/scroll-driven-playground/tree/main/src/pages/hero"
           >
@@ -61,13 +61,13 @@ const Hero = () => {
         </div>
         <div className="min-h-screen">
           <CenterLayout className="relative z-20">
-            <div className="animate-reveal mx-auto w-fit text-center opacity-0 timeline-view no-animations:opacity-100">
+            <div className="mx-auto w-fit animate-reveal text-center opacity-0 timeline-view no-animations:opacity-100">
               <div className="text-md w-full font-medium text-zinc-950 sm:text-lg md:text-xl dark:text-zinc-200">
                 'Luke, he is your father.'
               </div>
             </div>
             <CodeBlock
-              className="mx-auto mt-12 block w-fit"
+              className="mt-12"
               Icon={Github}
               linkHref="https://github.com/adamplesnik/scroll-driven-playground/tree/main/src/pages/hero"
               language="html"
@@ -97,7 +97,6 @@ const Hero = () => {
             <TimelineMarker textStart="+400px" textEnd="100%" className="top-4" />
           </div>
           <CodeBlock
-            className="mx-auto  block w-fit "
             language="html"
             Icon={Github}
             linkHref="https://github.com/adamplesnik/scroll-driven-playground/tree/main/src/pages/hero"
