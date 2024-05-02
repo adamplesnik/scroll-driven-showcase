@@ -9,7 +9,7 @@ const PlayButton = () => {
     <button
       onClick={() => dispatch({ type: 'playAction', payload: state })}
       type="button"
-      className="duration-400 flex size-10 cursor-pointer rounded-lg bg-sky-600 p-2 text-white transition-transform ease-line hover:scale-110"
+      className="duration-400 flex size-10 cursor-pointer rounded-lg bg-cyan-600 p-2 text-white transition-transform ease-line hover:scale-110"
     >
       <CirclePlay
         className={

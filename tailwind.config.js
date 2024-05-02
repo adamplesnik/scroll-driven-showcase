@@ -8,6 +8,7 @@ export default {
     extend: {
       animation: {
         gradient: 'gradient 5s ease-in-out forwards',
+        'move-header': 'move-header 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
         reveal: 'reveal 5s ease-in-out forwards',
         'to-height-full': 'to-height-full 5s linear forwards',
         'to-max-width-unset': 'to-max-width-unset 5s linear forwards',
@@ -33,6 +34,16 @@ export default {
           },
           to: {
             backgroundSize: '400% 100%',
+          },
+        },
+        'move-header': {
+          '50%': {
+            marginLeft: '190px',
+            top: '0',
+          },
+          to: {
+            marginLeft: '190px',
+            top: '-174px',
           },
         },
         reveal: {
