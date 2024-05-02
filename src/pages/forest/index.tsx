@@ -42,7 +42,7 @@ const Forest = () => {
         <CenterLayout>
           <CodeBlock
             language="html"
-            className="relative z-50"
+            className="relative z-40"
             Icon={Github}
             linkHref="https://github.com/adamplesnik/scroll-driven-playground/tree/main/src/pages/forest"
           >{`<span class="max-w-0 animate-to-max-width-unset overflow-hidden timeline" style="animation-range: 190px 210px;">e</span>`}</CodeBlock>
