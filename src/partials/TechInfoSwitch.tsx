@@ -14,7 +14,7 @@ const TechInfoSwitch = () => {
   return (
     <div
       onClick={() => dispatch({ type: 'action', payload: !state })}
-      className="size-8 cursor-pointer text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-100"
+      className="relative size-8 cursor-pointer text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-100"
       data-tooltip-id="tooltip"
       data-tooltip-content={tooltipContent}
       data-tooltip-place="bottom"
@@ -23,17 +23,17 @@ const TechInfoSwitch = () => {
     >
       <Monitor
         className={
-          'absolute size-8 p-1 transition-[transform,opacity] delay-150 duration-300 ease-line' +
+          'absolute left-1 top-1 size-6 p-0.5 transition-[transform,opacity] delay-150 duration-300 ease-line' +
           (state ? ' -rotate-180 opacity-0' : ' opacity-100')
         }
-        strokeWidth={'1.2'}
+        strokeWidth={'1.5'}
       />
       <Code2
         className={
-          'absolute size-8 p-1 transition-[transform,opacity] delay-150 duration-300 ease-line' +
+          'absolute left-1 top-1 size-6 p-0.5 transition-[transform,opacity] delay-150 duration-300 ease-line' +
           (!state ? ' rotate-180 opacity-0' : ' opacity-100')
         }
-        strokeWidth={'1.2'}
+        strokeWidth={'1.5'}
       />
       <Tooltip id="tooltip" className="!rounded-md !bg-zinc-600 !text-xs shadow-lg" />
     </div>

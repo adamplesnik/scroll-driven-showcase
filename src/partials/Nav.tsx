@@ -10,7 +10,7 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
       className={
-        'border-b border-b-slate-500/50 bg-slate-100/40 shadow-2xl shadow-black/5 backdrop-blur dark:border-b-slate-300/50 dark:bg-zinc-900/50' +
+        'border-b border-b-slate-300/70 bg-slate-100/30 shadow-2xl shadow-black/5 backdrop-blur dark:border-b-slate-600/50 dark:bg-zinc-900/30' +
         addWithSpace(className)
       }
       {...rest}
@@ -26,6 +26,7 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
         <DarkModeSwitch />
         <TechInfoSwitch />
         <NavItem
+          smallIcon
           Icon={Github}
           to="https://github.com/adamplesnik/scroll-driven-playground"
           target="_blank"

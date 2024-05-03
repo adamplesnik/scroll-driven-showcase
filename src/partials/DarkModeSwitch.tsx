@@ -24,8 +24,8 @@ const DarkModeSwitch = () => {
           (darkMode ? ' mt-1' : ' -mt-11')
         }
       >
-        <Moon strokeWidth={'1.2'} />
-        <Sun strokeWidth={'1.2'} />
+        <Moon strokeWidth={'1.5'} className="size-6 p-0.5" />
+        <Sun strokeWidth={'1.5'} className="size-6 p-0.5" />
       </div>
     </div>
   )
