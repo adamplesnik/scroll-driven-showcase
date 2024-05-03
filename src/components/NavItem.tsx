@@ -2,7 +2,7 @@ import { LucideIcon } from 'lucide-react'
 import { NavLink, NavLinkProps } from 'react-router-dom'
 import { addWithSpace } from '../utils/addWithSpace'
 
-const NavItem = ({ Icon, to, className, children, ...rest }: NavItemProps) => {
+const NavItem = ({ Icon, smallIcon = false, to, className, children, ...rest }: NavItemProps) => {
   return (
     <NavLink
       to={to}
@@ -16,7 +16,14 @@ const NavItem = ({ Icon, to, className, children, ...rest }: NavItemProps) => {
       {...rest}
     >
       <>
-        {Icon ? <Icon strokeWidth={'1.2'} /> : ''}
+        {Icon ? (
+          <Icon
+            strokeWidth={smallIcon ? '1.5' : '1.2'}
+            className={smallIcon ? 'size-6 p-0.5' : ''}
+          />
+        ) : (
+          ''
+        )}
         {children}
         <div className="absolute -bottom-5 left-1/2 -ml-1 hidden h-1 w-2 rounded-t-full bg-current transition-transform delay-150 duration-300" />
       </>
@@ -26,6 +33,7 @@ const NavItem = ({ Icon, to, className, children, ...rest }: NavItemProps) => {
 
 export type NavItemProps = {
   Icon?: LucideIcon
+  smallIcon?: boolean
 } & NavLinkProps
 
 export default NavItem
