@@ -1,7 +1,8 @@
+import clsx from 'clsx'
 import { LucideIcon } from 'lucide-react'
 import Prism from 'prismjs'
-import { HTMLAttributes, useEffect } from 'react'
-import { addWithSpace } from '../utils/addWithSpace'
+import { HTMLAttributes, useContext, useEffect } from 'react'
+import { TechInfoContext, TechInfoContextType } from '../providers/TechInfoContextProvider'
 import Link from './Link'
 
 const CodeBlock = ({
@@ -13,16 +14,19 @@ const CodeBlock = ({
   linkText = '',
   ...rest
 }: CodeProps) => {
+  const { techInfo } = useContext(TechInfoContext) as TechInfoContextType
+
   useEffect(() => {
     Prism.highlightAll()
   }, [])
 
   return (
     <div
-      className={
-        'mb-4 hidden rounded-lg border border-zinc-300 bg-gray-200/70 text-zinc-900 backdrop-blur isTech:block dark:border-zinc-700 dark:bg-gray-800/80 dark:text-zinc-300' +
-        addWithSpace(className)
-      }
+      className={clsx(
+        'mb-4 rounded-lg border border-zinc-300 bg-gray-200/70 text-zinc-900 backdrop-blur dark:border-zinc-700 dark:bg-gray-800/80 dark:text-zinc-300',
+        className,
+        techInfo ? 'block' : 'hidden'
+      )}
       {...rest}
     >
       <code

@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 import plugin from 'tailwindcss/plugin'
-import { transform } from 'typescript'
 
 export default {
   darkMode: 'selector',
@@ -96,7 +95,6 @@ export default {
         { values: { DEFAULT: '' }, modifiers: 'any' }
       )
       addVariant('path', '& > path')
-      addVariant('isTech', '&:where(.tech, .tech *)')
     }),
   ],
 }
