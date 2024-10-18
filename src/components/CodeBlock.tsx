@@ -23,9 +23,9 @@ const CodeBlock = ({
   return (
     <div
       className={clsx(
-        'mb-4 rounded-lg border border-zinc-300 bg-gray-200/70 text-zinc-900 backdrop-blur dark:border-zinc-700 dark:bg-gray-800/80 dark:text-zinc-300',
-        className,
-        techInfo ? 'block' : 'hidden'
+        'mb-4 rounded-lg border border-zinc-300 bg-gray-200/70 text-zinc-900 backdrop-blur transition-[transform,opacity] delay-150 dark:border-zinc-700 dark:bg-gray-800/80 dark:text-zinc-300',
+        techInfo ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0',
+        className
       )}
       {...rest}
     >

@@ -13,10 +13,10 @@ const TimelineMarker = ({
   return (
     <div
       className={clsx(
-        'z-50 w-full items-center gap-4 font-mono text-sm text-zinc-900  dark:text-zinc-100',
-        className,
-        absolute && ' absolute',
-        techInfo ? 'flex' : 'hidden'
+        'z-50 flex w-full items-center gap-4 font-mono text-sm text-zinc-900 transition-[transform,opacity] dark:text-zinc-100',
+        techInfo ? 'translate-y-0 opacity-100' : '-translate-y-[200%] opacity-0',
+        absolute && 'absolute',
+        className
       )}
     >
       {textStart && (
