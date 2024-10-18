@@ -4,7 +4,6 @@ import { Tooltip } from 'react-tooltip'
 import { TechInfoContext, TechInfoContextType } from '../providers/TechInfoContextProvider'
 
 const TechInfoSwitch = () => {
-  const storageTechMode = localStorage.getItem('tech') === 'true'
   const { techInfo, setTechInfo } = useContext(TechInfoContext) as TechInfoContextType
 
   const tooltipContent = techInfo ? 'Hide code and guides' : 'Show code and guides'
