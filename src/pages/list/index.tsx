@@ -1,5 +1,4 @@
 import Separator from '../../components/Separator'
-import BaseWithNav from '../../layouts/BaseWithNav'
 import Header from './Header'
 import Song, { SongType } from './Song'
 import album from './assets/album.jpg'
@@ -30,11 +29,11 @@ const songList: SongType[] = [
 
 const List = () => {
   return (
-    <BaseWithNav>
+    <>
       <div className="h-[200vh] min-h-screen bg-gradient-to-t from-slate-400 to-zinc-600 scope/trigger dark:from-zinc-700 dark:to-zinc-900">
         <div className="sticky top-0 mx-auto max-w-screen-sm px-8 py-24">
           <div className="flex flex-col gap-2">
-            <div className="sticky top-24 z-10 mb-4 animate-from-box-shadow-none rounded-lg bg-zinc-300/20 p-4 shadow-xl backdrop-blur timeline dark:bg-zinc-700/70">
+            <div className="animate-from-box-shadow-none sticky top-24 z-10 mb-4 rounded-lg bg-zinc-300/20 p-4 shadow-xl backdrop-blur timeline dark:bg-zinc-700/70">
               <img
                 src={album}
                 alt="Kind of Blue, album cover artwork"
@@ -63,7 +62,7 @@ const List = () => {
           </div>
         </div>
       </div>
-    </BaseWithNav>
+    </>
   )
 }
 
