@@ -5,17 +5,12 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.css'
 import Forest from './pages/forest/'
 import Hero from './pages/hero/index.tsx'
-import Circle from './pages/circle/index.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Circle />,
-    errorElement: <Circle />,
-  },
-  {
-    path: '/hero',
     element: <Hero />,
+    errorElement: <Hero />,
   },
   {
     path: '/forest',

@@ -1,4 +1,4 @@
-import { AlignVerticalJustifyEnd, Github, RollerCoaster, Trees } from 'lucide-react'
+import { AlignVerticalJustifyEnd, Github, Trees } from 'lucide-react'
 import { HTMLAttributes } from 'react'
 import NavItem from '../components/NavItem'
 import { addWithSpace } from '../utils/addWithSpace'
@@ -14,8 +14,7 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
       }
       {...rest}
     >
-      <NavItem Icon={RollerCoaster} to="/" />
-      <NavItem Icon={AlignVerticalJustifyEnd} to="/hero" />
+      <NavItem Icon={AlignVerticalJustifyEnd} to="/" />
       <NavItem Icon={Trees} to="/forest" />
       <div className="min-w-8 flex-1" />
       <DarkModeSwitch />
