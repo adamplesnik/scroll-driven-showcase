@@ -1,17 +1,19 @@
+import clsx from 'clsx'
 import { LucideIcon } from 'lucide-react'
 import { NavLink, NavLinkProps } from 'react-router-dom'
-import { addWithSpace } from '../utils/addWithSpace'
 
 const NavItem = ({ Icon, smallIcon = false, to, className, children, ...rest }: NavItemProps) => {
   return (
     <NavLink
       to={to}
       className={({ isActive }) =>
-        'relative flex px-2  transition-colors duration-200 hover:text-zinc-950  dark:hover:text-zinc-100' +
-        addWithSpace(className) +
-        (isActive
-          ? ' text-zinc-950 dark:text-zinc-200 [&>div]:block'
-          : ' text-zinc-600 dark:text-zinc-400')
+        clsx(
+          'relative flex px-2  transition-colors duration-200 hover:text-zinc-950  dark:hover:text-zinc-100',
+          className,
+          isActive
+            ? ' text-zinc-950 dark:text-zinc-200 [&>div]:block'
+            : ' text-zinc-600 dark:text-zinc-400'
+        )
       }
       {...rest}
     >
