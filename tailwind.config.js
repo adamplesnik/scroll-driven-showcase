@@ -9,12 +9,15 @@ export default {
       animation: {
         gradient: 'gradient 5s ease-in-out forwards',
         'move-header': 'move-header 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
-        reveal: 'reveal 5s ease-in-out forwards',
+        line: 'line 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
+        reveal: 'reveal 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
         'to-height-full': 'to-height-full 5s linear forwards',
         'to-max-width-unset': 'to-max-width-unset 5s linear forwards',
         'to-opacity-full': 'to-opacity-full 5s ease-in-out forwards',
+        'to-rotate-0': 'to-rotate-0 5s ease-in-out forwards',
         'to-stroke-dashoffset-0': 'to-stroke-dashoffset-0 5s ease-in-out forwards',
         'to-translate-x-0': 'to-translate-x-0 5s ease-in-out forwards',
+        'to-translate-x-50': 'to-translate-x-50 5s ease-in-out forwards',
         'to-translate-y-0': 'to-translate-y-0 5s ease-in-out forwards',
         'from-box-shadow-none': 'from-box-shadow-none 5s ease-in-out forwards',
         'from-translate-y-0': 'from-translate-y-0 5s ease-in-out forwards',
@@ -45,64 +48,72 @@ export default {
             marginLeft: '190px',
             top: '-174px',
           },
-        },
-        reveal: {
-          '50%': {
-            opacity: 1,
-            transform: 'scale(3)',
+          'to-rotate-0': {
+            to: { transform: 'rotateX(0)' },
+          },
+          line: {
+            '50%': { height: '200%', transform: 'translateY(-50%)' },
+          },
+          reveal: {
+            '50%': {
+              opacity: 1,
+              transform: 'scale(3)',
+            },
+          },
+          'to-height-full': {
+            to: { height: '100%' },
+          },
+          'to-max-width-unset': {
+            to: { maxWidth: 'unset' },
+          },
+          'to-opacity-full': {
+            to: { opacity: 1 },
+          },
+          'to-stroke-dashoffset-0': {
+            to: { strokeDashoffset: 0 },
+          },
+          'to-translate-x-0': {
+            to: { transform: 'translateX(0)' },
+          },
+          'to-translate-x-50': {
+            to: { transform: 'translateX(-50vw)' },
+          },
+          'to-translate-y-0': {
+            to: { transform: 'translateY(0)' },
+          },
+          'from-translate-y-0': {
+            from: { transform: 'translateY(0)' },
+          },
+          'from-box-shadow-none': {
+            from: { boxShadow: 'none' },
           },
         },
-        'to-height-full': {
-          to: { height: '100%' },
+        transitionTimingFunction: {
+          line: 'cubic-bezier(0.65, 0.05, 0.17, 0.99)',
         },
-        'to-max-width-unset': {
-          to: { maxWidth: 'unset' },
-        },
-        'to-opacity-full': {
-          to: { opacity: 1 },
-        },
-        'to-stroke-dashoffset-0': {
-          to: { strokeDashoffset: 0 },
-        },
-        'to-translate-x-0': {
-          to: { transform: 'translateX(0)' },
-        },
-        'to-translate-y-0': {
-          to: { transform: 'translateY(0)' },
-        },
-        'from-translate-y-0': {
-          from: { transform: 'translateY(0)' },
-        },
-        'from-box-shadow-none': {
-          from: { boxShadow: 'none' },
-        },
-      },
-      transitionTimingFunction: {
-        line: 'cubic-bezier(0.65, 0.05, 0.17, 0.99)',
       },
     },
+    plugins: [
+      require('@adam.plesnik/tailwindcss-scroll-driven-animations'),
+      plugin(function ({ matchUtilities, addVariant }) {
+        matchUtilities(
+          {
+            'dash-offset': (value, { modifier }) => ({
+              strokeDashoffset: modifier,
+            }),
+          },
+          { values: { DEFAULT: '' }, modifiers: 'any' }
+        )
+        matchUtilities(
+          {
+            'dash-array': (value, { modifier }) => ({
+              strokeDasharray: modifier,
+            }),
+          },
+          { values: { DEFAULT: '' }, modifiers: 'any' }
+        )
+        addVariant('path', '& > path')
+      }),
+    ],
   },
-  plugins: [
-    require('@adam.plesnik/tailwindcss-scroll-driven-animations'),
-    plugin(function ({ matchUtilities, addVariant }) {
-      matchUtilities(
-        {
-          'dash-offset': (value, { modifier }) => ({
-            strokeDashoffset: modifier,
-          }),
-        },
-        { values: { DEFAULT: '' }, modifiers: 'any' }
-      )
-      matchUtilities(
-        {
-          'dash-array': (value, { modifier }) => ({
-            strokeDasharray: modifier,
-          }),
-        },
-        { values: { DEFAULT: '' }, modifiers: 'any' }
-      )
-      addVariant('path', '& > path')
-      addVariant('isTech', '&:where(.tech, .tech *)')
-    }),
-  ],
 }
