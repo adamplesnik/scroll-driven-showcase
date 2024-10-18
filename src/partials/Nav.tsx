@@ -16,8 +16,8 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
       {...rest}
     >
       <CenterLayout className="relative flex items-center gap-2">
-        <h1 className="mr-4 text-sm font-semibold text-zinc-800 dark:text-zinc-200">
-          Scroll-driven Playground
+        <h1 className="mr-4 hidden font-semibold tracking-[-0.0175em] text-zinc-800 sm:block dark:text-zinc-200">
+          Scroll-driven playground
         </h1>
         <NavItem Icon={AlignVerticalJustifyEnd} to="/" />
         <NavItem Icon={Trees} to="/forest" />
