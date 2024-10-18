@@ -1,10 +1,10 @@
+import clsx from 'clsx'
 import { HTMLAttributes } from 'react'
-import { addWithSpace } from '../../utils/addWithSpace'
 import PlayButton from './PlayButton'
 
 const Header = ({ className }: HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className={'flex w-auto flex-col' + addWithSpace(className)}>
+    <div className={clsx('flex w-auto flex-col', className)}>
       <div className="flex items-center">
         <h1 className="flex-1 truncate text-3xl font-medium text-zinc-900 dark:text-zinc-100">
           Kind of Blue
