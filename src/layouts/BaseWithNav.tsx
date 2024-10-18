@@ -1,17 +1,14 @@
-import { PropsWithChildren } from 'react'
+import { Outlet, ScrollRestoration } from 'react-router-dom'
 import Nav from '../partials/Nav'
 
-const BaseWithNav = ({ children }: PropsWithChildren<BaseWithNavProps>) => {
+const BaseWithNav = () => {
   return (
     <>
       <Nav className="fixed left-0 right-0 top-0 z-50" />
-      {children}
+      <ScrollRestoration />
+      <Outlet />
     </>
   )
-}
-
-export type BaseWithNavProps = {
-  children: PropsWithChildren
 }
 
 export default BaseWithNav

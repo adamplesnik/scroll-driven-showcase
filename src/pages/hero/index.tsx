@@ -2,7 +2,6 @@ import { Github } from 'lucide-react'
 import CodeBlock from '../../components/CodeBlock'
 import ScrollDown from '../../components/ScrollDown'
 import TimelineMarker from '../../components/TimelineMarker'
-import BaseWithNav from '../../layouts/BaseWithNav'
 import CenterLayout from '../../layouts/CenterLayout'
 import ChartColumn from './ChartColumn'
 
@@ -25,7 +24,7 @@ const chart = `<div class="animate-to-height-full timeline/chart range-on-entry/
 
 const Hero = () => {
   return (
-    <BaseWithNav>
+    <>
       <ScrollDown />
       <div className="bg-gradient-to-t from-slate-400/0 to-slate-600/50">
         <CenterLayout className="h-[200vh]">
@@ -106,7 +105,7 @@ const Hero = () => {
         </CenterLayout>
         <div className="min-h-dvh"></div>
       </div>
-    </BaseWithNav>
+    </>
   )
 }
 

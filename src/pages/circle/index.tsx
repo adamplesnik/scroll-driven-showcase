@@ -1,12 +1,11 @@
 import ScrollDown from '../../components/ScrollDown'
-import BaseWithNav from '../../layouts/BaseWithNav'
 
 const Circle = () => {
   return (
-    <BaseWithNav>
+    <>
       <ScrollDown />
       <div className="h-[300vh] scope/rotation">
-        <div className="animate-to-translate-x-50 sticky top-96 flex h-20 w-full translate-x-1/2 flex-col gap-2 timeline">
+        <div className="sticky top-96 flex h-20 w-full translate-x-1/2 animate-to-translate-x-50 flex-col gap-2 timeline">
           <div className="sticky top-48 flex justify-between">
             {[...Array(6)].map((e, i) => (
               <span className="size-4 bg-red-400" key={e + i}></span>
@@ -34,7 +33,7 @@ const Circle = () => {
         </div> */}
         <div className="view-timeline/rotation">a</div>
       </div>
-    </BaseWithNav>
+    </>
   )
 }
 

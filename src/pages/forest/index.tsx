@@ -4,7 +4,6 @@ import Heading from '../../components/Heading'
 import Paragraph from '../../components/Paragraph'
 import ScrollDown from '../../components/ScrollDown'
 import TimelineMarker from '../../components/TimelineMarker'
-import BaseWithNav from '../../layouts/BaseWithNav'
 import CenterLayout from '../../layouts/CenterLayout'
 import Amenities from './Amenities'
 import TextAppear from './TextAppear'
@@ -13,7 +12,7 @@ import viewImage from './assets/view.jpg'
 
 const Forest = () => {
   return (
-    <BaseWithNav>
+    <>
       <ScrollDown />
       <div className="h-[200vh]">
         <CenterLayout>
@@ -73,7 +72,7 @@ const Forest = () => {
         <Paragraph>Or not.</Paragraph>
         <img src={viewImage} alt="" className="rounded-lg" />
       </CenterLayout>
-    </BaseWithNav>
+    </>
   )
 }
 
