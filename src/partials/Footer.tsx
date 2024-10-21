@@ -1,12 +1,15 @@
+import { NavLink } from 'react-router-dom'
 import Link from '../components/Link'
 import Paragraph from '../components/Paragraph'
 import CenterLayout from '../layouts/CenterLayout'
 
 const Footer = () => {
   return (
-    <div className="border-t border-slate-300 bg-gray-300 py-8">
+    <div className="border-t border-slate-300 bg-gray-300 py-8 dark:border-zinc-600 dark:bg-zinc-800">
       <CenterLayout className="flex flex-col items-baseline gap-8 text-sm md:flex-row">
-        <div className="tracking-[-0.0175em shrink-0 font-semibold">Scroll-driven playground</div>
+        <NavLink to="/">
+          <div className="tracking-[-0.0175em shrink-0 font-semibold">Scroll-driven playground</div>
+        </NavLink>
         <div className="flex max-w-md flex-col">
           <Paragraph>
             Explore the possibilities of CSS scroll-driven animations created using a{' '}

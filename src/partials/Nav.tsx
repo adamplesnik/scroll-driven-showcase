@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import { AlignVerticalJustifyEnd, List, Trees } from 'lucide-react'
 import { HTMLAttributes } from 'react'
+import { NavLink } from 'react-router-dom'
 import NavItem from '../components/NavItem'
 import CenterLayout from '../layouts/CenterLayout'
 import DarkModeSwitch from './DarkModeSwitch'
@@ -17,9 +18,11 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
       {...rest}
     >
       <CenterLayout className="relative flex items-center gap-2">
-        <h1 className="mr-4 hidden font-semibold tracking-[-0.0175em] text-zinc-800 sm:block dark:text-zinc-200">
-          Scroll-driven playground
-        </h1>
+        <NavLink to="/">
+          <h1 className="mr-4 hidden font-semibold tracking-[-0.0175em] text-zinc-800 sm:block dark:text-zinc-200">
+            Scroll-driven playground
+          </h1>
+        </NavLink>
         <NotSupportedBadge />
         <NavItem Icon={AlignVerticalJustifyEnd} to="/" />
         <NavItem Icon={Trees} to="/forest" />
