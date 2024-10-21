@@ -46,7 +46,7 @@ const CodeBlock = ({
   )
 }
 
-export type CodeProps = {
+type CodeProps = {
   Icon?: LucideIcon | undefined
   language?: 'javascript' | 'css' | 'html' | 'bash'
   linkHref?: string | undefined

@@ -8,11 +8,11 @@ const NavItem = ({ Icon, smallIcon = false, to, className, children, ...rest }: 
       to={to}
       className={({ isActive }) =>
         clsx(
-          'relative flex px-2  transition-colors duration-200 hover:text-zinc-950  dark:hover:text-zinc-100',
+          'relative flex px-2 transition-colors duration-200 hover:text-zinc-950 dark:hover:text-zinc-100',
           className,
           isActive
-            ? ' text-zinc-950 dark:text-zinc-200 [&>div]:block'
-            : ' text-zinc-600 dark:text-zinc-400'
+            ? 'text-zinc-950 dark:text-zinc-200 [&>div]:block'
+            : 'text-zinc-600 dark:text-zinc-400'
         )
       }
       {...rest}
@@ -33,7 +33,7 @@ const NavItem = ({ Icon, smallIcon = false, to, className, children, ...rest }: 
   )
 }
 
-export type NavItemProps = {
+type NavItemProps = {
   Icon?: LucideIcon
   smallIcon?: boolean
 } & NavLinkProps
