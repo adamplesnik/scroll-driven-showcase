@@ -24,12 +24,6 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
         <div className="min-w-8 flex-1" />
         <DarkModeSwitch />
         <TechInfoSwitch />
-        <NavItem
-          smallIcon
-          Icon={Github}
-          to="https://github.com/adamplesnik/scroll-driven-playground"
-          target="_blank"
-        />
       </CenterLayout>
     </div>
   )

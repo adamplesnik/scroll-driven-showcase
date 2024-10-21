@@ -1,31 +1,13 @@
-import { PropsWithChildren } from 'react'
+import clsx from 'clsx'
+import { HTMLAttributes, PropsWithChildren } from 'react'
 
-const Paragraph = ({
-  children,
-  className = '',
-  size = 'regular',
-}: PropsWithChildren<ParagraphProps>) => {
-  return (
-    <p
-      className={
-        'mb-5 w-full ' +
-        (size === 'regular'
-          ? 'text-base leading-7'
-          : size === 'large'
-            ? 'text-lg'
-            : 'text-sm font-medium') +
-        (className && ` ${className}`)
-      }
-    >
-      {children}
-    </p>
-  )
+const Paragraph = ({ children, className = '' }: HTMLAttributes<HTMLParagraphElement>) => {
+  return <p className={clsx('mb-4 w-full leading-7', className)}>{children}</p>
 }
 
 export interface ParagraphProps {
   children: PropsWithChildren
   className?: string
-  size?: 'regular' | 'large' | 'small'
 }
 
 export default Paragraph
