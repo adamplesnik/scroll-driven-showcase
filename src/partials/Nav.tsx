@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { AlignVerticalJustifyEnd, Github, Trees } from 'lucide-react'
+import { AlignVerticalJustifyEnd, List, Trees } from 'lucide-react'
 import { HTMLAttributes } from 'react'
 import NavItem from '../components/NavItem'
 import CenterLayout from '../layouts/CenterLayout'
@@ -23,6 +23,7 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
         <NotSupportedBadge />
         <NavItem Icon={AlignVerticalJustifyEnd} to="/" />
         <NavItem Icon={Trees} to="/forest" />
+        <NavItem Icon={List} to="/list" />
         <div className="min-w-8 flex-1" />
         <DarkModeSwitch />
         <TechInfoSwitch />
