@@ -4,6 +4,7 @@ import { HTMLAttributes } from 'react'
 import NavItem from '../components/NavItem'
 import CenterLayout from '../layouts/CenterLayout'
 import DarkModeSwitch from './DarkModeSwitch'
+import NotSupportedBadge from './NotSupportedBadge'
 import TechInfoSwitch from './TechInfoSwitch'
 
 const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
@@ -19,6 +20,7 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
         <h1 className="mr-4 hidden font-semibold tracking-[-0.0175em] text-zinc-800 sm:block dark:text-zinc-200">
           Scroll-driven playground
         </h1>
+        <NotSupportedBadge />
         <NavItem Icon={AlignVerticalJustifyEnd} to="/" />
         <NavItem Icon={Trees} to="/forest" />
         <div className="min-w-8 flex-1" />
