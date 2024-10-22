@@ -9,6 +9,7 @@ export default {
       animation: {
         gradient: 'gradient 5s ease-in-out forwards',
         line: 'line 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
+        'list-hero-picture': 'list-hero-picture cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
         'move-header': 'move-header 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
         reveal: 'reveal 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
         'to-height-full': 'to-height-full 5s linear forwards',
@@ -39,14 +40,19 @@ export default {
             backgroundSize: '400% 100%',
           },
         },
+        'list-hero-picture': {
+          to: {
+            maxHeight: '176px',
+          },
+        },
         'move-header': {
           '50%': {
             marginLeft: '190px',
-            top: '0',
+            marginTop: '0',
           },
           to: {
             marginLeft: '190px',
-            top: '-174px',
+            marginTop: '-174px',
           },
         },
         'to-rotate-0': {
