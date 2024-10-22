@@ -1,4 +1,4 @@
-# Scroll-driven Playground
+# Scroll-driven showcase
 
 Explore the possibilities of scroll-driven CSS animations. Powered by **Tailwind CSS**.
 
