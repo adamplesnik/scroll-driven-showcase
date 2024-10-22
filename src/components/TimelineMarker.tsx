@@ -30,7 +30,7 @@ const TimelineMarker = ({
   )
 }
 
-export type TimelineMarkerProps = {
+type TimelineMarkerProps = {
   textStart?: string | undefined
   textEnd?: string | undefined
   absolute?: boolean

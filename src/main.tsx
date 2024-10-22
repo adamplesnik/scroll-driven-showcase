@@ -6,6 +6,7 @@ import './index.css'
 import BaseWithNav from './layouts/BaseWithNav.tsx'
 import Forest from './pages/forest/'
 import Hero from './pages/hero/index.tsx'
+import List from './pages/list/index.tsx'
 import TechInfoContextProvider from './providers/TechInfoContextProvider.tsx'
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: '/forest',
         element: <Forest />,
+      },
+      {
+        path: '/list',
+        element: <List />,
       },
     ],
     errorElement: <Hero />,

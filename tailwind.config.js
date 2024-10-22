@@ -9,6 +9,8 @@ export default {
       animation: {
         gradient: 'gradient 5s ease-in-out forwards',
         line: 'line 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
+        'list-hero-picture': 'list-hero-picture cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
+        'move-header': 'move-header 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
         reveal: 'reveal 5s cubic-bezier(0.65, 0.05, 0.17, 0.99) forwards',
         'to-height-full': 'to-height-full 5s linear forwards',
         'to-max-width-unset': 'to-max-width-unset 5s linear forwards',
@@ -18,6 +20,8 @@ export default {
         'to-translate-x-0': 'to-translate-x-0 5s ease-in-out forwards',
         'to-translate-x-50': 'to-translate-x-50 5s ease-in-out forwards',
         'to-translate-y-0': 'to-translate-y-0 5s ease-in-out forwards',
+        'from-box-shadow-none': 'from-box-shadow-none 5s ease-in-out forwards',
+        'from-translate-y-0': 'from-translate-y-0 5s ease-in-out forwards',
         'stroke-opacity':
           'to-opacity-full 5s ease-in-out forwards, to-translate-x-0 5s ease-in-out forwards',
       },
@@ -34,6 +38,21 @@ export default {
           },
           to: {
             backgroundSize: '400% 100%',
+          },
+        },
+        'list-hero-picture': {
+          to: {
+            maxHeight: '176px',
+          },
+        },
+        'move-header': {
+          '50%': {
+            marginLeft: '190px',
+            marginTop: '0',
+          },
+          to: {
+            marginLeft: '190px',
+            marginTop: '-174px',
           },
         },
         'to-rotate-0': {
@@ -69,6 +88,12 @@ export default {
         'to-translate-y-0': {
           to: { transform: 'translateY(0)' },
         },
+        'from-translate-y-0': {
+          from: { transform: 'translateY(0)' },
+        },
+        'from-box-shadow-none': {
+          from: { boxShadow: 'none' },
+        },
       },
       transitionTimingFunction: {
         line: 'cubic-bezier(0.65, 0.05, 0.17, 0.99)',
@@ -76,6 +101,7 @@ export default {
     },
   },
   plugins: [
+    // eslint-disable-next-line no-undef
     require('@adam.plesnik/tailwindcss-scroll-driven-animations'),
     plugin(function ({ matchUtilities, addVariant }) {
       matchUtilities(

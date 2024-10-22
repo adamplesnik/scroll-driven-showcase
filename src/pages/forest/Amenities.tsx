@@ -48,7 +48,7 @@ const Amenities = () => {
   return (
     <div className="mb-24 mt-24">
       <div className="relative">
-        <ul className="mb-32 flex flex-col gap-4">
+        <ul className="mb-32 flex flex-col gap-4 overflow-clip">
           {list.map((item, i) => (
             <li
               className="flex translate-x-[30vw] animate-stroke-opacity gap-4 rounded-lg bg-slate-200/30 px-4 py-2 opacity-0 timeline-view range-on-entry/60px_160px dark:bg-zinc-800/60"

@@ -32,7 +32,7 @@ const TechInfoSwitch = () => {
         }
         strokeWidth={'1.5'}
       />
-      <Tooltip id="tooltip" className="!rounded-md !bg-zinc-600 !text-xs shadow-lg" />
+      <Tooltip id="tooltip" className="!rounded-md !bg-zinc-700 !text-sm shadow-lg" />
     </div>
   )
 }

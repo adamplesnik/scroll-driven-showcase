@@ -1,9 +1,11 @@
 import clsx from 'clsx'
-import { AlignVerticalJustifyEnd, Github, Trees } from 'lucide-react'
+import { AlignVerticalJustifyEnd, List, Trees } from 'lucide-react'
 import { HTMLAttributes } from 'react'
+import { NavLink } from 'react-router-dom'
 import NavItem from '../components/NavItem'
 import CenterLayout from '../layouts/CenterLayout'
 import DarkModeSwitch from './DarkModeSwitch'
+import NotSupportedBadge from './NotSupportedBadge'
 import TechInfoSwitch from './TechInfoSwitch'
 
 const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
@@ -16,20 +18,18 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
       {...rest}
     >
       <CenterLayout className="relative flex items-center gap-2">
-        <h1 className="mr-4 hidden font-semibold tracking-[-0.0175em] text-zinc-800 sm:block dark:text-zinc-200">
-          Scroll-driven playground
-        </h1>
+        <NavLink to="/">
+          <h1 className="mr-4 hidden font-semibold tracking-[-0.0175em] text-zinc-800 sm:block dark:text-zinc-200">
+            Scroll-driven playground
+          </h1>
+        </NavLink>
+        <NotSupportedBadge />
         <NavItem Icon={AlignVerticalJustifyEnd} to="/" />
         <NavItem Icon={Trees} to="/forest" />
+        <NavItem Icon={List} to="/list" />
         <div className="min-w-8 flex-1" />
         <DarkModeSwitch />
         <TechInfoSwitch />
-        <NavItem
-          smallIcon
-          Icon={Github}
-          to="https://github.com/adamplesnik/scroll-driven-playground"
-          target="_blank"
-        />
       </CenterLayout>
     </div>
   )
