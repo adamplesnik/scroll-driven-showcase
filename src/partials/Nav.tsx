@@ -20,7 +20,7 @@ const Nav = ({ className, ...rest }: HTMLAttributes<HTMLDivElement>) => {
       <CenterLayout className="relative flex items-center gap-2">
         <NavLink to="/">
           <h1 className="mr-4 hidden font-semibold tracking-[-0.0175em] text-zinc-800 sm:block dark:text-zinc-200">
-            Scroll-driven playground
+            Scroll-driven showcase
           </h1>
         </NavLink>
         <NotSupportedBadge />

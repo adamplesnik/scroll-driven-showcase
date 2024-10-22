@@ -9,11 +9,9 @@ const Footer = () => {
       <CenterLayout className="flex flex-col items-baseline gap-8 text-sm md:flex-row">
         <div className="flex flex-col gap-2">
           <NavLink to="/">
-            <div className="tracking-[-0.0175em shrink-0 font-semibold">
-              Scroll-driven playground
-            </div>
+            <div className="tracking-[-0.0175em shrink-0 font-semibold">Scroll-driven showcase</div>
           </NavLink>
-          <NavLink to="https://github.com/adamplesnik/scroll-driven-playground" target="_blank">
+          <NavLink to="https://github.com/adamplesnik/scroll-driven-showcase" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 98 96"
